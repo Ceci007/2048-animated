@@ -17,7 +17,7 @@
 
 ## 🔴 Live Demo
 
-[Live Demo]()
+[Live Demo](https://2048-ceci.netlify.app)
 
 
 ## 🛠 Getting Started
