@@ -3,6 +3,16 @@
   src: url("../src/assets/clear-sans.ttf") format("truetype");
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
 body {
   display: flex;
   background-color: #57407c;
@@ -12,6 +22,7 @@ body {
   align-items: center;
   font-family: "Clear Sans", sans-serif;
   font-size: 21px;
+  overflow: hidden;
 }
 
 .text {
@@ -41,17 +52,32 @@ body {
 .details-box {
   display: flex;
   align-items: center;
-  width: 100%;
   justify-content: space-between;
+  width: 100vw;
+  margin: 15px auto;
+  position: relative;
+  width: 90%; 
 }
 
-.details-container {
+.fixed-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10px;
-  position: relative;
+  position: fixed;
+  padding: 0px;
+  top: 0;
+  left: 50%;
+  margin: 0 auto;
+  margin-top: -15px;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.margin-right {
+  margin-right: 20px;
 }
 
 .resetButton {
@@ -62,9 +88,16 @@ body {
   padding: 10px 20px;
   border-radius: 7px;
   transition: color 0.3s ease, background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  
   &:hover {
     background-color: #d3386a;
     color: rgba(255, 255, 255, 1);
+  }
+
+  @media only screen and (max-width: 500px) {
+    font-size: 18px;
   }
 }
 
@@ -83,29 +116,52 @@ body {
 
 .footer-rules {
   margin: 15px;
+  height: auto;
+  position: relative;
 }
 
 .text {
   background-color: #3d2963;
   color: rgba(255, 255, 255, 0.5);
   font-weight: 300;
+  margin: 15px auto;
   margin-top: 20px;
   font-size: 16px;
   padding: 5px 15px;
-  padding-top: 20px;
-  width: 100%; 
+  padding: 20px;
+  width: 100vw; 
   border-radius: 7px;
+  position: relative;
 
   & span {
     font-weight: 700;
   }
 }
 
-.copyright {
-  text-align: center;
+.rules-modal {
+  width: 100vw;
+  background-color: #57407c;
+  color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  border-radius: 0.7;
 }
 
-footer small {
+.buttons {
+  display: flex;
+  margin-right: 20px;
+}
+
+.copyright {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  padding: 0 70px;
+  margin: 0 auto;
+  margin-top: 10xp;
+  color: #3d2963;
+}
+
+small {
   font-weight: 700;
 }
 
