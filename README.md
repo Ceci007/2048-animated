@@ -1,4 +1,4 @@
-#  🧐 2048 Game
+#  🧐 2048
 
 > This is a Game made with react that resembles the 2048 Game and rules, also it has some cool animations.
 
